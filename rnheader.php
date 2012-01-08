@@ -11,7 +11,7 @@ else $loggedin = FALSE;
 
 echo "<html><head><title>$appname";
 if ($loggedin) echo " ($user)";
-echo "</title></head><body><font face='verdana' size='2'";
+echo "</title></head><body><font face='verdana' size='2'>";
 echo "<h2>$appname</h2>";
 
 if ($loggedin)
@@ -22,7 +22,7 @@ if ($loggedin)
 		<a href='rnfriends.php'>Friends</a> | 
 		<a href='rnmessages.php'>Messages</a> | 
 		<a href='rnprofile.php'>Profile</a> | 
-		<a href='rnlogout.php'>Log out</a>"
+		<a href='rnlogout.php'>Log out</a>";
 }
 else
 {
