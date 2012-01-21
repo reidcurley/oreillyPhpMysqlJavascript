@@ -1,5 +1,5 @@
 <?php //rnsignup.php
-include_once 'rnheader.php'
+include_once 'rnheader.php';
 
 echo <<<_END
 <script>

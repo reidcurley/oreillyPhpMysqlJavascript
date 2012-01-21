@@ -21,6 +21,15 @@ function createTable($name, $query)
 	}
 }
 
+function deleteTable($name)
+{
+	if(tableExists($name))
+	{
+		queryMysql("DROP TABLE $name");
+	}
+	else echo "Table '$name' doesn't exist<br />";
+}
+
 function tableExists($name)
 {
 	$result = queryMysql("SHOW TABLES LIKE '$name'");

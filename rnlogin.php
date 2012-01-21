@@ -1,20 +1,20 @@
 <?php // rnlogin.php
 include_once 'rnheader.php';
 echo "<h3>Member Log in</h3>";
-$error = $user = $pass = ""
+$error = $user = $pass = "";
 if (isset($_POST['user']))
 {
 	$user = sanitizeString($_POST['user']);
 	$pass = sanitizeString($_POST['pass']);
 	
-	if ($user == "" || $pas == "")
+	if ($user == "" || $pass == "")
 	{
 		$error = "Not all fields were entered<br />";
 	}
 	else
 	{
-		query = "SELECT user,pass FROM rnmembers
-			WHERE user='$user' AND pass=''$pass'";
+		$query = "SELECT user, pass FROM rnmembers
+			WHERE user='$user' AND pass='$pass'";
 		
 		if (mysql_num_rows(queryMysql($query)) == 0)
 		{
@@ -36,7 +36,7 @@ Username <input type='text' maxlength='16' name='user'
 	value='$user' /><br />
 Password <input type='password' maxlength='16' name='pass'
 	value='$pass' /><br />
-$nbsp; $nbsp; $nbsp; $nbsp; $nbsp; $nbsp; $nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 <input type='submit' value='Login' />
 </form>
 _END;
